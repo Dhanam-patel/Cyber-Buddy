@@ -5,28 +5,28 @@ from langchain_core.prompts import load_prompt
 import time
 import streamlit as st
 
-st.title("Dear AI - Emotional Support Chatbot")
-user_model = st.selectbox("Select Model", ["HuggingFace", "Google Generative AI"])
-if user_model == "HuggingFace":
-    hf_api_key = st.text_input("Please enter your HuggingFace API key", type="password")
-    llm = HuggingFaceEndpoint(
-        repo_id="baidu/ERNIE-4.5-300B-A47B-Base-PT",
-        task="text-generation",
-        huggingfacehub_api_token=hf_api_key
-    )
-    model = ChatHuggingFace(llm=llm, temperature=2)
-    model_name = "baidu/ERNIE-4.5-300B-A47B-Base-PT"
-else:
-    gem_api_key = st.text_input("Please enter your Google API key", type="password")
-    model = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash-lite",
-    temperature=1,
-    google_api_key = 'AIzaSyCIxXS7whyWcf8VWOgQF59xqJBUs9KpZy0'
-    )
-    model_name = "gemini-2.0-flash-lite"
+st.title("Cyber Buddy")
+# user_model = st.selectbox("Select Model", ["HuggingFace", "Google Generative AI"])
+# if user_model == "HuggingFace":
+#     hf_api_key = st.text_input("Please enter your HuggingFace API key", type="password")
+#     llm = HuggingFaceEndpoint(
+#         repo_id="baidu/ERNIE-4.5-300B-A47B-Base-PT",
+#         task="text-generation",
+#         huggingfacehub_api_token=hf_api_key
+#     )
+#     model = ChatHuggingFace(llm=llm, temperature=2)
+#     model_name = "baidu/ERNIE-4.5-300B-A47B-Base-PT"
+# else:
+gem_api_key = st.text_input("Please enter your Google API key", type="password")
+model = ChatGoogleGenerativeAI(
+model="gemini-2.5-flash-lite",
+temperature=1,
+google_api_key = 'AIzaSyCIxXS7whyWcf8VWOgQF59xqJBUs9KpZy0'
+)
+model_name = "gemini-2.0-flash-lite"
 
-User_gender = st.selectbox('Gender', ['Male', 'Female'])
-User_age = st.text_input('Age: ')
+# User_gender = st.selectbox('Gender', ['Male', 'Female'])
+# User_age = st.text_input('Age: ')
 # System_Message = str(load_pro/mpt("Template/System_Message.json").invoke({}))
 
 if 'history' not in st.session_state:
@@ -139,4 +139,5 @@ for message in st.session_state.history:
             """,
             unsafe_allow_html=True,
         )
+
 
