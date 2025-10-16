@@ -63,7 +63,7 @@ Chat History
     end = time.time()
     st.session_state.history.append(AIMessage(content=response.content))
     st.write(f"Time taken: {end - start} seconds")
-    st.write(f"Model name: {model_name}") 
+    
 
 
 for message in st.session_state.history:
@@ -85,6 +85,7 @@ for message in st.session_state.history:
             """,
             unsafe_allow_html=True,
         )
+
 
 
 
