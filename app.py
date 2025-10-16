@@ -17,7 +17,7 @@ st.title("Cyber Buddy")
 #     model = ChatHuggingFace(llm=llm, temperature=2)
 #     model_name = "baidu/ERNIE-4.5-300B-A47B-Base-PT"
 # else:
-gem_api_key = st.text_input("Please enter your Google API key", type="password")
+# gem_api_key = st.text_input("Please enter your Google API key", type="password")
 model = ChatGoogleGenerativeAI(
 model="gemini-2.5-flash-lite",
 temperature=1,
@@ -139,5 +139,6 @@ for message in st.session_state.history:
             """,
             unsafe_allow_html=True,
         )
+
 
 
