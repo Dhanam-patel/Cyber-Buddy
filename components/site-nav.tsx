@@ -93,10 +93,8 @@ export default async function Nav({ fixed = false }) {
 								</Link>
 							</NavigationMenuItem>
 							<NavigationMenuItem>
-								<Link legacyBehavior passHref href="/vulnerability-scanner">
-									<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-										Vulnerability Scanner
-									</NavigationMenuLink>
+								<Link passHref href="https://cyber-buddy.streamlit.app/">									
+										Cyber AI
 								</Link>
 							</NavigationMenuItem>
 							<NavigationMenuItem>
