@@ -94,7 +94,7 @@ export default async function Nav({ fixed = false }) {
 							</NavigationMenuItem>
 							<NavigationMenuItem>
 								<Link passHref href="https://cymet-ai.streamlit.app/">									
-										Cyber AI
+										CyMent AI
 								</Link>
 							</NavigationMenuItem>
 							<NavigationMenuItem>
