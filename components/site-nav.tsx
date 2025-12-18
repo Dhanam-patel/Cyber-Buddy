@@ -93,7 +93,7 @@ export default async function Nav({ fixed = false }) {
 								</Link>
 							</NavigationMenuItem>
 							<NavigationMenuItem>
-								<Link passHref href="https://cyber-buddy.streamlit.app/">									
+								<Link passHref href="https://cymet-ai.streamlit.app/">									
 										Cyber AI
 								</Link>
 							</NavigationMenuItem>
